@@ -1,0 +1,12 @@
+﻿RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+RewriteRule ^blog-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  blog-detay.php?sef=$1&blog_id=$2 [L,QSA]
+RewriteRule ^kategori-([0-9a-zA-Z-_]+)-([0-9]+)$  kategori.php?sef=$1&kategori_id=$2 [L,QSA]
+RewriteRule ^icerik-detay-([0-9a-zA-Z-_]+)-([0-9]+)$  icerik-detay.php?sef=$1&icerik_id=$2 [L,QSA]
